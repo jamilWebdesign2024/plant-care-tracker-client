@@ -3,12 +3,17 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
+import MainLayout from './Layouts/MainLayout.jsx';
+import Home from './Components/Home.jsx';
+import AuthProvider from './Context/AuthProvider.jsx';
+import AllPlants from './Pages/AllPlants.jsx';
+import Login from './Pages/Login.jsx';
+import Register from './Pages/Register.jsx';
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import MainLayout from './Layouts/MainLayout.jsx';
-import Home from './Components/Home.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +23,18 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path: 'allplants',
+        Component: AllPlants
+      },
+      {
+        path: 'login',
+        Component: Login
+      },
+      {
+        path: 'register',
+        Component: Register
       }
     ]
   },
@@ -25,6 +42,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+   <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
