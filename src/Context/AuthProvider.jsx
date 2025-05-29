@@ -1,41 +1,59 @@
-// import React from 'react';
-// import { AuthContext } from './AuthContext';
-
-
-// const AuthProvider = ({children}) => {
-
-  
-//      const userInfo = {
-        
-//     }
-
-//     const createuser =()=>{
-//         return createUserWithEmailAndPassword
-//     }
-
-//     return (
-//         <AuthContext value={userInfo}>
-//             {children}
-//         </AuthContext>
-//     );
-// };
-
-// export default AuthProvider;
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase/firebase.init';
 
+
+const googleProvider = new GoogleAuthProvider();
+
 const AuthProvider = ({children}) => {
+    
+    const [user, setUser]=useState(null)
+    const [loading, setLoading]=useState(true)
 
     const createUser = (email, password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
+    };
+
+    const signIn=(email, password)=>{
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
     }
+
+    const googleSignIn = ()=>{
+        return signInWithPopup(auth, googleProvider)
+    }
+
+    const logOut=()=>{
+        return signOut(auth)
+    }
+
+    const updateUser = (updatedData)=>{
+        return updateProfile(auth.currentUser, updatedData)
+    }
+
+     useEffect(()=>{
+     const unSubscribe  = onAuthStateChanged(auth, (currentUser)=>{
+            setUser(currentUser);
+            setLoading(false)
+        })
+        return ()=>{
+            unSubscribe();
+        }
+    }, [])
 
 
     const userInfo = {
-        createUser
+        user,
+        setUser,
+        createUser,
+        loading,
+        setLoading,
+        signIn,
+        googleSignIn,
+        logOut,
+        updateUser
     }
    
     

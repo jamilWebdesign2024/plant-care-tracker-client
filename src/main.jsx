@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         Component: AllPlants
       },
       {
-        path: 'login',
+        path: '/auth/login',
         Component: Login
       },
       {

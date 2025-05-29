@@ -1,40 +1,109 @@
-import React from 'react';
+import React, { use, useEffect } from 'react';
 import image from '../../src/assets/slider-2.jpg'
 import { AuthContext } from '../Context/AuthContext';
+import Swal from 'sweetalert2';
+import { useLocation, useNavigate } from 'react-router';
+
 
 const Register = () => {
 
-  const {createUser} = use(AuthContext);
-    console.log(createUser);
 
   
 
-  const handleSignUp = e =>{
+  const {createUser, googleSignIn, updateUser, setUser} = use(AuthContext);
+    console.log(createUser);
+     const location =useLocation();
+        const navigate =useNavigate();
+
+      
+  
+
+  const handleSignUp = (e) =>{
       e.preventDefault();
       const form = e.target;
+      // const photo = form.photo.value;
 
       const formData = new FormData(form);
-      const newUser = Object.fromEntries(formData.entries())
+      
+      const {email, password, photo, ...restFormData} = Object.fromEntries(formData.entries())
 
-      const email = formData.get('email');
-      const password = formData.get('password')
-      console.log(email, password);
-
-      // create user in the firebase
-
-      createUser(email, password)
+     createUser(email, password)
       .then(result =>{
-        console.log(result);
-        
-      })
+        const user = result.user;
 
-      .catch(error =>{
+        updateUser({displayName: name, photoURL: photo})
+          .then(()=>{
+              setUser({...user, displayName: name, photoURL: photo});
+              navigate(`${location.state? location.state : "/auth/login"}`)
+          })
+          .catch((error)=>{
+            setUser(user);
+            console.log(error);
+            
+          })
+
+        const userProfile = {
+          email,
+          ...restFormData,
+          creationTime : result?.user?.metadata?.creationTime,
+          lastSignInTime : result?.user?.metadata?.lastSignInTime
+        }
+
+        // save profile info in the db
+        fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: {
+            'content-type' : 'application/json'
+          },
+          body: JSON.stringify(userProfile)
+        })
+        .then(res => res.json())
+        .then(data =>{
+          if(data.insertedId){
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your PlantCare Account has created",
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+          navigate(`${location.state? location.state : "/"}`)
+        })
+      })
+        .catch(error =>{
         console.log(error);
-        
       })
-
-
     }
+    const handleGoogleLogin = ()=>{
+      googleSignIn()
+      .then(result=>{
+        const user = result.user;
+        if(user){
+          Swal.fire({
+            position: "top-end",
+             icon: "success",
+              title: "Your PlantCare Account has created",
+              showConfirmButton: false,
+              timer: 1500
+          });
+        }
+        navigate(`${location.state? location.state : "/"}`)
+      })
+      .catch(error=>{
+          console.log(error);
+          
+      })
+      .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage)
+            console.log(errorCode);
+            
+            
+        });
+    }
+
 
 
 
@@ -90,7 +159,7 @@ const Register = () => {
                   Register your Account
                 </button>
                 <span>or</span>
-                <button className="btn font-bold bg-white hover:bg-green-500 mt-4 w-full border-none text-black">
+                <button onClick={handleGoogleLogin} className="btn font-bold bg-white hover:bg-green-500 mt-4 w-full border-none text-black">
                   Sign in With Google
                 </button>
               </div>
