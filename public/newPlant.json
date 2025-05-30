@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "image1": "https://i.postimg.cc/g0WBSQ6y/pic-1.jpg",
+    "name1": "Rose Garden",
+    "image2": "https://i.postimg.cc/HnR6Qhgy/pic13.jpg",
+    "name2": "Jasmine Bloom",
+    "price": "$25.99",
+    "star": "⭐⭐⭐⭐⭐"
+  },
+  {
+    "id": 2,
+    "image1": "https://i.postimg.cc/SQv1FJMx/pic14.jpg",
+    "name1": "Orchid Pot",
+    "image2": "https://i.postimg.cc/9Fw8WCdt/pic15-jpg.jpg",
+    "name2": "Cactus Delight",
+    "price": "$19.49",
+    "star": "⭐⭐⭐⭐"
+  },
+  {
+    "id": 3,
+    "image1": "https://i.postimg.cc/Z5kfn2jk/pic17.jpg",
+    "name1": "Fern Shade",
+    "image2": "https://i.postimg.cc/t4hBxkms/pic18.jpg",
+    "name2": "Minty Fresh",
+    "price": "$29.99",
+    "star": "⭐⭐⭐⭐⭐"
+  },
+  {
+    "id": 4,
+    "image1": "https://i.postimg.cc/DznBdGtB/pic19-jpg.jpg",
+    "name1": "Lily Spot",
+    "image2": "https://i.postimg.cc/7L9XB64D/pic20.jpg",
+    "name2": "Daisy Charm",
+    "price": "$21.75",
+    "star": "⭐⭐⭐"
+  },
+  {
+    "id": 5,
+    "image1": "https://i.postimg.cc/vBmhCs8n/pic21.jpg",
+    "name1": "Bamboo Breeze",
+    "image2": "https://i.postimg.cc/B6wp0VtV/pic23.jpg",
+    "name2": "Succulent Pack",
+    "price": "$32.1",
+    "star": "⭐⭐⭐⭐⭐"
+  },
+  {
+    "id": 6,
+    "image1": "https://i.postimg.cc/fytKTf9T/pic24-jpg.jpg",
+    "name1": "Ivy Vine",
+    "image2": "https://i.postimg.cc/2ysxqLQd/pic25-jpg.jpg",
+    "name2": "Palm Sunset",
+    "price": "$27.8",
+    "star": "⭐⭐⭐⭐"
+  },
+  {
+    "id": 7,
+    "image1": "https://i.postimg.cc/NGKqHh8L/pic26-jpg.jpg",
+    "name1": "Leaf Shine",
+    "image2": "https://i.postimg.cc/WpxRm9S8/pic27.jpg",
+    "name2": "Golden Touch",
+    "price": "$18.95",
+    "star": "⭐⭐⭐"
+  },
+  {
+    "id": 8,
+    "image1": "https://i.postimg.cc/ncmy3vPJ/pic29-jpg.jpg",
+    "name1": "Zen Bonsai",
+    "image2": "https://i.postimg.cc/Y9XnSSD8/pic3-jpg.jpg",
+    "name2": "Peony Love",
+    "price": "$24.99",
+    "star": "⭐⭐⭐⭐"
+  },
+  {
+    "id": 9,
+    "image1": "https://i.postimg.cc/vZdpkcJ6/pic30.jpg",
+    "name1": "Morning Herb",
+    "image2": "https://i.postimg.cc/bwHKhqPV/pic31-jpg.jpg",
+    "name2": "Evening Bloom",
+    "price": "$23.5",
+    "star": "⭐⭐⭐⭐⭐"
+  },
+  {
+    "id": 10,
+    "image1": "https://i.postimg.cc/FKrwFwsr/pic32.jpg",
+    "name1": "Wild Tulip",
+    "image2": "https://i.postimg.cc/wBwZ1F7h/pic34-jpg.jpg",
+    "name2": "Butterfly Bush",
+    "price": "$20.3",
+    "star": "⭐⭐⭐⭐"
+  },
+  {
+    "id": 11,
+    "image1": "https://i.postimg.cc/xCq7MHzB/pic35.jpg",
+    "name1": "Lavender Lane",
+    "image2": "https://i.postimg.cc/26Jtw6dy/pic37.jpg",
+    "name2": "Sunshine Lily",
+    "price": "$28.0",
+    "star": "⭐⭐⭐⭐⭐"
+  },
+  {
+    "id": 12,
+    "image1": "https://i.postimg.cc/7hfBJyp4/pic5.jpg",
+    "name1": "Garden Mix",
+    "image2": "https://i.postimg.cc/1tR7PFBf/pic7.jpg",
+    "name2": "Bloom Burst",
+    "price": "$22.6",
+    "star": "⭐⭐⭐⭐"
+  }
+]

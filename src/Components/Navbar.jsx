@@ -43,7 +43,7 @@ return (
                             <NavLink to='/allPlants'><li>All Plants</li></NavLink>
                             <NavLink to='/addPlant'><li>Add Plant</li></NavLink>
                             <NavLink to='/myPlants'><li>My Plants</li></NavLink>
-                            {!user && <NavLink to='/register'><li>Register</li></NavLink>}
+                            {!user && <NavLink to='/auth/register'><li>Register</li></NavLink>}
                         </ul>
                     </div>
                     <div className="navbar-end gap-3">
@@ -71,7 +71,7 @@ return (
                                 <NavLink to='/addPlant'><li>Add Plant</li></NavLink>
                                 <NavLink to='/myPlants'><li>My Plants</li></NavLink>
                                 {
-                                    !user && <NavLink to='/register'><li>Register</li></NavLink>
+                                    !user && <NavLink to='/auth/register'><li>Register</li></NavLink>
                                 }
                                 {
                                     user ? <Link onClick={handleLogout} className='bg-red-600 text-white'><span>Logout</span></Link>

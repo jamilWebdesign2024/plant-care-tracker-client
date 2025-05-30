@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Overwatering",
+    "desc": "One of the most common mistakes is giving your plant too much water. Excess moisture can suffocate roots, promote fungal growth"
+  },
+  {
+    "title": "Lack of Sunlight",
+    "desc": "Plants need light to photosynthesize. Placing them in dark corners deprives them of energy and causes poor growth, yellowing leaves."
+  },
+  {
+    "title": "Poor Drainage",
+    "desc": "Without proper drainage holes, water accumulates at the bottom, drowning the roots. Always choose pots with drainage."
+  },
+  {
+    "title": "Ignoring Pests",
+    "desc": "Insects like spider mites and aphids can silently damage your plant. If left untreated, they multiply and affect nearby plants too."
+  },
+  {
+    "title": "Wrong Soil Type",
+    "desc": "Each plant species has different soil needs. Using garden soil indoors or heavy clay for succulents can stunt growth."
+  },
+  {
+    "title": "Fertilizer Overuse",
+    "desc": "More isn't always better. Over-fertilizing can burn roots and lead to salt buildup. Stick to the recommended dose and fertilize."
+  }
+]
