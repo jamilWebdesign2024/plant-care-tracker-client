@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router';
 import icon from '../../src/assets/icon.png'
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
+import './Navbaer.css';
 
 
 

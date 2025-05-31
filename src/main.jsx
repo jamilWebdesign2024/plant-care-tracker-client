@@ -19,6 +19,7 @@ import AddPlant from './Pages/AddPlant.jsx';
 import MyPlant from './Pages/MyPlant.jsx';
 import PrivateRoute from './Pages/PrivateRoute.jsx';
 import PlantDetails from './Pages/PlantDetails.jsx';
+import Loading from './Pages/Loading.jsx';
 
 
 
@@ -32,17 +33,25 @@ const router = createBrowserRouter([
       {
         index: true,
         loader:()=>fetch('newPlant.json'),
-        Component: Home
+        Component: Home,
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'allplants',
-        loader: () => fetch('allPlant.json').then(res => res.json()),
-        Component: AllPlants
+        loader: ()=>fetch('./allPlant.json'),
+        Component: AllPlants,
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/plantDetails/:id',
-        loader: () => fetch('allPlant.json').then(res => res.json()), 
-        element: <PrivateRoute><PlantDetails /></PrivateRoute>
+        loader: async ({ params }) => {
+          const res = await fetch('/allPlant.json');
+          const data = await res.json();
+          const plant = data.find(item => item.id === params.id); // এখানে .id এর টাইপ চেক করো
+          return plant;
+        },
+        element: (<PrivateRoute><PlantDetails /></PrivateRoute>),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: '/auth/login',

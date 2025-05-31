@@ -1,65 +1,75 @@
 import React from 'react';
-import { useLoaderData, Link } from 'react';
+import { Link, useLoaderData } from 'react-router';
 
 const PlantDetails = () => {
-  const plant = useLoaderData();
 
-  if (!plant) {
-    return (
-      <div className="p-6 text-center text-red-600">
-        Sorry, no plant found with this ID.
-      </div>
-    );
-  }
+  const plant = useLoaderData();
+  const {id, name, category, wateringFrequency, image, benefits, drawbacks, description}=plant;
+  console.log(plant);
+  
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white rounded-lg shadow-lg overflow-hidden">
-      {/* Plant Name */}
+    <div className='w-10/12 mx-auto mt-10 bg-white rounded-lg shadow-lg overflow-hidden'>
+      
       <div className="bg-green-700 p-5 text-white text-center text-3xl font-extrabold">
-        {plant.name}
-      </div>
-
-      {/* Image */}
-      <div className="p-6 flex justify-center">
-        <img
-          src={plant.image}
-          alt={plant.name}
-          className="rounded-lg object-cover w-full max-h-64"
-        />
-      </div>
-
-      {/* Details */}
-      <div className="px-6 pb-6 space-y-4 text-gray-700">
-        <div>
-          <span className="font-semibold text-green-800">Category: </span>
-          <span>{plant.category}</span>
+       {name}
         </div>
 
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+            <div className="p-6 flex justify-start">
+            <img
+                src={image}
+                alt=""
+                className="rounded-lg object-cover w-full max-h-screen"
+              />
+            </div>
+
+            <div className="px-6 pb-6 space-y-5 text-gray-700 mt-5">
+          <div>
+            <span className="font-bold text-green-800">Category: </span>
+            <span>{category}</span>
+          </div>
         <div>
-          <span className="font-semibold text-green-800">Watering Frequency: </span>
-          <span>{plant.wateringFrequency}</span>
+          <span className="font-bold text-green-800">Watering Frequency: </span>
+           <span>{wateringFrequency}</span>
+        </div>
+        <div>
+          <span className="font-bold text-green-800">Benefites: </span>
+           <span>{benefits}</span>
+        </div>
+        <div>
+          <span className="font-bold text-green-800">Drabacks: </span>
+           <span>{drawbacks}</span>
         </div>
 
         {plant.description && (
           <div>
-            <span className="font-semibold text-green-800">Description: </span>
-            <p className="mt-1 text-gray-600">{plant.description}</p>
+            <span className="font-bold text-green-800">Description: </span>
+            <p className="mt-1 text-gray-600">{description}</p>
           </div>
         )}
+            </div>
+        </div>
+
+        <div className="px-6 pb-6">
+        <Link to="/allplants">
+            <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 cursor-pointer rounded transition duration-200">
+              Back to All Plants
+            </button>
+          </Link>
       </div>
 
-      {/* Back Button */}
-      <div className="px-6 pb-6">
-        <Link to="/allplants">
-          <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded transition duration-200">
-            Back to All Plants
-          </button>
-        </Link>
-      </div>
+      
+
+
+
+
     </div>
   );
 };
 
 export default PlantDetails;
+
+
 
 
