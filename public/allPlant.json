@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "Snake Plant",
+    "category": "Indoor",
+    "wateringFrequency": "Once a week",
+    "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "2",
+    "name": "Spider Plant",
+    "category": "Indoor",
+    "wateringFrequency": "Twice a week",
+    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "3",
+    "name": "Peace Lily",
+    "category": "Indoor",
+    "wateringFrequency": "Every 3 days",
+    "image": "https://images.unsplash.com/photo-1524594157365-1c3f0a86d25b?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "4",
+    "name": "Areca Palm",
+    "category": "Indoor",
+    "wateringFrequency": "Twice a week",
+    "image": "https://images.unsplash.com/photo-1499395777497-324e28b7d302?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "5",
+    "name": "Fiddle Leaf Fig",
+    "category": "Indoor",
+    "wateringFrequency": "Once every 5 days",
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "6",
+    "name": "Aloe Vera",
+    "category": "Succulent",
+    "wateringFrequency": "Every 2 weeks",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "7",
+    "name": "Jade Plant",
+    "category": "Succulent",
+    "wateringFrequency": "Once every 2 weeks",
+    "image": "https://images.unsplash.com/photo-1535998572523-2301ac4f3b4f?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "8",
+    "name": "Boston Fern",
+    "category": "Indoor",
+    "wateringFrequency": "Twice a week",
+    "image": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "9",
+    "name": "Rubber Plant",
+    "category": "Indoor",
+    "wateringFrequency": "Once a week",
+    "image": "https://images.unsplash.com/photo-1499395777497-324e28b7d302?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "10",
+    "name": "Lavender",
+    "category": "Outdoor",
+    "wateringFrequency": "Once every 3 days",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "11",
+    "name": "Bamboo Palm",
+    "category": "Indoor",
+    "wateringFrequency": "Twice a week",
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=400&q=60"
+  },
+  {
+    "id": "12",
+    "name": "Money Plant",
+    "category": "Indoor",
+    "wateringFrequency": "Once a week",
+    "image": "https://images.unsplash.com/photo-1524594157365-1c3f0a86d25b?auto=format&fit=crop&w=400&q=60"
+  }
+]

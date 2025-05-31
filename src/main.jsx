@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode} from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -17,8 +17,13 @@ import {
 import ErrorPage from './Pages/ErrorPage.jsx';
 import AddPlant from './Pages/AddPlant.jsx';
 import MyPlant from './Pages/MyPlant.jsx';
+import PrivateRoute from './Pages/PrivateRoute.jsx';
+import PlantDetails from './Pages/PlantDetails.jsx';
+
+
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <MainLayout></MainLayout>,
@@ -31,7 +36,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'allplants',
+        loader: () => fetch('allPlant.json').then(res => res.json()),
         Component: AllPlants
+      },
+      {
+        path: '/plantDetails/:id',
+        loader: () => fetch('allPlant.json').then(res => res.json()), 
+        element: <PrivateRoute><PlantDetails /></PrivateRoute>
       },
       {
         path: '/auth/login',
@@ -43,15 +54,24 @@ const router = createBrowserRouter([
       },
       {
         path: 'myPlants',
-        Component: MyPlant
+        element: (
+          <PrivateRoute>
+            <MyPlant />
+          </PrivateRoute>
+        )
       },
       {
         path: 'addPlant',
-        Component: AddPlant
+        element: (
+          <PrivateRoute>
+            <AddPlant />
+          </PrivateRoute>
+        )
       }
     ]
   },
 ]);
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

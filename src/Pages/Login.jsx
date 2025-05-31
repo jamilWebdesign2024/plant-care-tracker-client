@@ -89,7 +89,7 @@ const Login = () => {
               <button className="btn font-bold bg-green-400 hover:bg-green-500 mt-4 w-full border-none text-black">
                 Login
               </button>
-              <p className='pt-5 font-semibold text-center'>Don't have an account ? <Link to="/register" className='text-blue-600 underline'>Register</Link></p>
+              <p className='pt-5 font-semibold text-center'>Don't have an account ? <Link to="/auth/register" className='text-blue-600 underline'>Register</Link></p>
             </form>
           </div>
         </div>
