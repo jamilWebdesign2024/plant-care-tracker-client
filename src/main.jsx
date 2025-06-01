@@ -63,11 +63,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'myPlants',
+        loader: ()=> fetch('http://localhost:3000/plants'),
         element: (
           <PrivateRoute>
             <MyPlant />
           </PrivateRoute>
-        )
+        ),
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'addPlant',

@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthContext';
+import Swal from 'sweetalert2';
 
 const AddPlant = () => {
 
@@ -9,7 +10,36 @@ const AddPlant = () => {
         e.preventDefault();
 
         const form = e.target;
-    }
+        const formData = new FormData(form);
+        const newPlant = Object.fromEntries(formData.entries());
+        console.log(newPlant);
+        
+
+        // send data to the server
+        fetch('http://localhost:3000/plants', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(newPlant)
+        })
+            .then(res=>res.json())
+            .then(data =>{
+                if(data.insertedId){
+                    console.log('added successfully');
+                    Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Add Plant Successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                    });
+                }
+                
+            })
+        }
+
+        
 
     return (
         <div className='lg:p-24 p-4 max-w-7xl mx-auto '>
@@ -28,7 +58,7 @@ const AddPlant = () => {
                             <input type="text" name='name' className="input w-full border border-green-800" placeholder="Plant Name" />
                         </fieldset> 
                         <fieldset className="fieldset  rounded-box p-4">
-                            <select defaultValue="Select Your Category" className="select w-full border border-green-800 ">
+                            <select name='category' defaultValue="Select Your Category" className="select w-full border border-green-800 ">
                             <option disabled={true}>Select Your Category</option>
                             <option>succulent</option>
                             <option>fern</option>
@@ -36,10 +66,10 @@ const AddPlant = () => {
                             </select>
                         </fieldset> 
                         <fieldset className="fieldset  rounded-box p-4">
-                           <textarea className="textarea border border-green-800 h-24 w-full" placeholder="Write your plant Description"></textarea>
+                           <textarea name='description' className="textarea border border-green-800 h-24 w-full" placeholder="Write your plant Description"></textarea>
                         </fieldset> 
                         <fieldset className="fieldset  rounded-box p-4">
-                            <select defaultValue="Select Care Level" className="select w-full border border-green-800">
+                            <select name='careLevel' defaultValue="Select Care Level" className="select w-full border border-green-800">
                             <option disabled={true}>Select Care Level</option>
                             <option>Easy</option>
                             <option>Moderate</option>
@@ -47,7 +77,7 @@ const AddPlant = () => {
                             </select>
                         </fieldset> 
                         <fieldset className="fieldset  rounded-box p-4">
-                            <select defaultValue="Water Frequency" className="select w-full border border-green-800">
+                            <select name='wateringFrequency' defaultValue="Water Frequency" className="select w-full border border-green-800">
                             <option disabled={true}>Water Frequency</option>
                             <option>EveryDay</option>
                             <option>Every 3 days</option>
