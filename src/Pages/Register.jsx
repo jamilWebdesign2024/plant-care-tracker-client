@@ -1,4 +1,4 @@
-import React, { use, useEffect } from 'react';
+import React, { use } from 'react';
 import image from '../../src/assets/slider-2.jpg'
 import { AuthContext } from '../Context/AuthContext';
 import Swal from 'sweetalert2';
@@ -11,8 +11,7 @@ const Register = () => {
   
 
   const {createUser, googleSignIn, updateUser, setUser} = use(AuthContext);
-    console.log(createUser);
-     const location =useLocation();
+    const location =useLocation();
         const navigate =useNavigate();
 
       
@@ -25,7 +24,7 @@ const Register = () => {
 
       const formData = new FormData(form);
       
-      const {email, password, photo, ...restFormData} = Object.fromEntries(formData.entries())
+      const {email, name, password, photo, ...restFormData} = Object.fromEntries(formData.entries())
 
      createUser(email, password)
       .then(result =>{
@@ -34,7 +33,7 @@ const Register = () => {
         updateUser({displayName: name, photoURL: photo})
           .then(()=>{
               setUser({...user, displayName: name, photoURL: photo});
-              navigate(`${location.state? location.state : "/auth/login"}`)
+              navigate(`${location.state? location.state : "/"}`)
           })
           .catch((error)=>{
             setUser(user);
@@ -172,3 +171,5 @@ const Register = () => {
 };
 
 export default Register;
+
+

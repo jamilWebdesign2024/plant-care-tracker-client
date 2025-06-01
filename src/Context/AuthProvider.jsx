@@ -33,7 +33,7 @@ const AuthProvider = ({children}) => {
         return updateProfile(auth.currentUser, updatedData)
     }
 
-     useEffect(()=>{
+    useEffect(()=>{
      const unSubscribe  = onAuthStateChanged(auth, (currentUser)=>{
             setUser(currentUser);
             setLoading(false)
