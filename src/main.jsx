@@ -20,6 +20,7 @@ import MyPlant from './Pages/MyPlant.jsx';
 import PrivateRoute from './Pages/PrivateRoute.jsx';
 import PlantDetails from './Pages/PlantDetails.jsx';
 import Loading from './Pages/Loading.jsx';
+import UpdatePlants from './Pages/UpdatePlants.jsx';
 
 
 
@@ -78,6 +79,11 @@ const router = createBrowserRouter([
             <AddPlant />
           </PrivateRoute>
         )
+      },
+      {
+        path: '/updatePlants/:id',
+        loader: ({params}) =>fetch(`http://localhost:5174/myPlants/${params.id}`), 
+        Component: UpdatePlants
       }
     ]
   },
