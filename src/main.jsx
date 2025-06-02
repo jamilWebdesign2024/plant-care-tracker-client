@@ -81,8 +81,12 @@ const router = createBrowserRouter([
         )
       },
       {
-        path: '/updatePlants/:id',
-        loader: ({params}) =>fetch(`http://localhost:5174/myPlants/${params.id}`), 
+        path: 'updatePlants/:id',
+        loader: async ({ params }) => {
+          const res = await fetch(`http://localhost:3000/plants/${params.id}`);
+          const data = await res.json();
+          return data;
+        },
         Component: UpdatePlants
       }
     ]
