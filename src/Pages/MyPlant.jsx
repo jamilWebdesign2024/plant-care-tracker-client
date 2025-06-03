@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import Swal from 'sweetalert2';
 // import MyPlantData from './MyPlantData';
@@ -6,6 +6,9 @@ import Swal from 'sweetalert2';
 const MyPlant = () => {
 
     const plants = useLoaderData();
+
+    const [initialplants, setintialPlants]=useState(plants);
+
 
     const {_id, image, name, category, description, careLevel, wateringFrequency, next, last, health, email, userName}=plants;
 
@@ -38,6 +41,10 @@ const MyPlant = () => {
                         text: "Your Plant has been deleted.",
                         icon: "success"
                         });
+
+                        // remove the plants from the state
+                        const remainingPlants = initialplants.filter(plant => plant._id !== _id);
+                        setintialPlants(remainingPlants);
                     }
                 })
             
@@ -69,7 +76,7 @@ const MyPlant = () => {
             <tbody>
                 
                  {
-                plants.map(plant=><tr key={plant._id} className='text-center hover:bg-green-50'>
+                initialplants.map(plant=><tr key={plant._id} className='text-center hover:bg-green-50'>
                     <th className='px-4 py-2 border'>
                     <img className='w-16 h-16 object-cover mx-auto rounded-md' src={plant.image} alt="" />
                     </th>

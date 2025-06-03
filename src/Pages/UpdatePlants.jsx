@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
+import Swal from 'sweetalert2';
 
 const UpdatePlants = () => {
 
@@ -28,7 +29,15 @@ const UpdatePlants = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            if(data.modifiedCount){
+                Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Plant Updated Successfully!",
+                showConfirmButton: false,
+                timer: 1500
+                });
+            }
             
         })
 
