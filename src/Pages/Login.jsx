@@ -14,6 +14,7 @@ const Login = () => {
   const {signIn} = use(AuthContext)
   const location =useLocation();
   const navigate =useNavigate();
+  const [passwordError, setPasswordError] = useState("");
 
 
   const handleLogin = (e) =>{
@@ -21,6 +22,20 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password=form.password.value;
+
+     if (password.length < 8) {
+      Swal.fire({
+        icon: "error",
+        title: "Something Wrong",
+        text: "Password Must be more than 8 characters, including number, lowercase letter, uppercase letter!",
+      });
+      // setNameError("Name must be at least 5 characters long.");
+      return;
+    } else {
+      setPasswordError("");
+    }
+
+
 
     signIn(email, password)
     .then((result)=>{
@@ -38,7 +53,17 @@ const Login = () => {
     })
     .catch((error)=>{
       const errorCode = error.code;
-      setError(errorCode)
+      if (errorCode) {
+      Swal.fire({
+        icon: "error",
+        title: "Something Wrong",
+        text: "Password not Valid, enter valid password",
+      });
+      return;
+    } else {
+      setPasswordError("");
+    }
+      // setError("password not matched")
     })
   }
   
@@ -76,6 +101,11 @@ const Login = () => {
                             className="input w-full px-4 py-3 mb-2 text-gray-600 bg-green-50 border border-neutral rounded focus:outline-none focus:ring-2 focus:ring-neutral" 
                             required
                             placeholder="password" />
+                             {
+                                passwordError && <p className='text-xs text-error'>{passwordError}</p>
+                              }
+
+
                             <button 
                             onClick={()=>{setShowPassword(!showPassword)}}
                             className='btn btn-xs absolute top-3 right-4'>{

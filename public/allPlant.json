@@ -7,7 +7,8 @@
     "image": "https://trees-sa.co.za/wp-content/uploads/formidable/2/IMG_20190322_100419.jpg",
     "benefits": "Emits a sweet fragrance that promotes relaxation and is used in perfumes and essential oils.",
     "drawbacks": "Its sap can cause skin irritation and is toxic if ingested.",
-    "description": "Frangipani is known for its stunning blooms and heavenly scent. People often choose this plant for its aesthetic appeal and calming aroma. It creates a tropical feel indoors. The flowers are often used in spiritual and wellness settings. It requires minimal watering and thrives in warm conditions."
+    "description": "Frangipani is known for its stunning blooms and heavenly scent...",
+    "careLevel": "Flowering"
   },
   {
     "id": "2",
@@ -17,7 +18,8 @@
     "image": "https://cdn.shopify.com/s/files/1/0642/4579/3010/files/How_to_care_for_Spider_Plant_480x480.jpg?v=1739485235.jpg",
     "benefits": "Purifies air by removing toxins like formaldehyde and carbon monoxide.",
     "drawbacks": "Can suffer from brown tips due to fluoride in water or dry air.",
-    "description": "Spider Plant is a popular choice for beginners because it's hardy and low-maintenance. Its long, arching leaves add a dynamic look to any space. It produces baby plants that can be propagated easily. Many choose it for its proven air-cleaning properties. It’s also safe for pets."
+    "description": "Spider Plant is a popular choice for beginners...",
+    "careLevel": "Fern"
   },
   {
     "id": "3",
@@ -27,7 +29,8 @@
     "image": "https://cdn.mos.cms.futurecdn.net/qYNPupRnspGWPF4886Z7hB.jpg",
     "benefits": "Filters out harmful air pollutants and improves humidity indoors.",
     "drawbacks": "Toxic to pets and humans if ingested, causing nausea or vomiting.",
-    "description": "Peace Lilies are elegant plants with white blooms that brighten up any room. They are loved for their air-purifying qualities. These plants also symbolize peace and prosperity. Their glossy leaves and consistent blooming make them a decor favorite. They thrive in low-light settings."
+    "description": "Peace Lilies are elegant plants with white blooms...",
+    "careLevel": "Flowering"
   },
   {
     "id": "4",
@@ -37,7 +40,8 @@
     "image": "https://cdn.shopify.com/s/files/1/0553/5711/2435/files/Areca-Palm-plant_480x480.jpg?v=1722232962.jpg",
     "benefits": "Acts as a natural humidifier and adds tropical charm to interiors.",
     "drawbacks": "Sensitive to overwatering and prone to pest infestations like spider mites.",
-    "description": "Areca Palm is chosen for its lush, feathery fronds and air-purifying capabilities. It gives an indoor space a resort-like feel. This plant is excellent for improving humidity in dry environments. It's pet-friendly and non-toxic. Regular maintenance helps keep it looking vibrant."
+    "description": "Areca Palm is chosen for its lush, feathery fronds...",
+    "careLevel": "Fern"
   },
   {
     "id": "5",
@@ -47,27 +51,30 @@
     "image": "https://www.beardsanddaisies.co.uk/cdn/shop/products/B_D_Day-1-071ed_1_952d84b6-3244-4aa0-9c3c-b97ad19ab73a_900x.jpg?v=1675261414.jpg",
     "benefits": "Adds bold greenery and makes a dramatic style statement in rooms.",
     "drawbacks": "Can be sensitive to light changes and prone to root rot.",
-    "description": "Fiddle Leaf Fig is adored for its large, glossy leaves and modern look. It makes a stunning focal point in living rooms or offices. While a bit finicky, its beauty rewards patient caretakers. Many interior designers recommend it for a minimalist aesthetic. It thrives with consistent care."
+    "description": "Fiddle Leaf Fig is adored for its large, glossy leaves...",
+    "careLevel": "Flowering"
   },
   {
     "id": "6",
     "name": "Aloe Vera",
-    "category": "Succulent",
+    "category": "Outdoor",
     "wateringFrequency": "Every 2 weeks",
     "image": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/e1a4/live/1a2b4bc0-0d82-11f0-b234-07dc7691c360.jpg",
     "benefits": "Gel inside the leaves treats burns, cuts, and skin irritation.",
     "drawbacks": "Overwatering can lead to root rot; mildly toxic to pets.",
-    "description": "Aloe Vera is well known for its healing properties and low-maintenance nature. People often grow it for its medicinal gel used on skin. Its spiky, fleshy leaves give a sculptural touch to decor. It’s ideal for sunny windowsills. It also has some air-purifying properties."
+    "description": "Aloe Vera is well known for its healing properties...",
+    "careLevel": "Succulent"
   },
   {
     "id": "7",
     "name": "Jade Plant",
-    "category": "Succulent",
+    "category": "Outdoor",
     "wateringFrequency": "Once every 2 weeks",
     "image": "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:350,cw:900,ch:900,q:80,w:900/tJwQ7w6uytDpxrChQfSSf3.jpg",
     "benefits": "Symbolizes wealth and prosperity; very low maintenance.",
     "drawbacks": "Can be toxic to pets if ingested and prone to leaf drop with overwatering.",
-    "description": "Jade Plant is a beloved succulent often gifted as a housewarming symbol of good luck. It features thick, glossy leaves and grows slowly. Its sturdy nature makes it a great desk plant. Many enjoy its bonsai-like appearance. It's great for busy individuals or forgetful waterers."
+    "description": "Jade Plant is a beloved succulent often gifted...",
+    "careLevel": "Succulent"
   },
   {
     "id": "8",
@@ -77,7 +84,8 @@
     "image": "https://planetdesert.com/cdn/shop/files/Boston-fern-plant-jpj_1400x.jpg?v=1730909853.jpg",
     "benefits": "Boosts humidity and removes airborne pollutants.",
     "drawbacks": "Requires high humidity and regular misting to prevent fronds from drying.",
-    "description": "Boston Fern is admired for its lush, arching fronds that soften indoor spaces. It’s a classic choice for hanging baskets. People love it for its vintage charm and texture. It helps maintain air moisture, especially in air-conditioned homes. It needs consistent watering and indirect light."
+    "description": "Boston Fern is admired for its lush, arching fronds...",
+    "careLevel": "Fern"
   },
   {
     "id": "9",
@@ -87,7 +95,8 @@
     "image": "https://foli.ca/cdn/shop/articles/3.png?v=1703733117&width=1100.jpg",
     "benefits": "Absorbs airborne toxins and adds bold greenery indoors.",
     "drawbacks": "Its sap can irritate skin; toxic to pets if chewed.",
-    "description": "Rubber Plant is a striking addition to modern interiors with its deep green, glossy leaves. It's chosen for its ability to grow tall and purify indoor air. Minimal care and strong visual impact make it a favorite. It adapts well to indoor conditions. The plant prefers bright, indirect light."
+    "description": "Rubber Plant is a striking addition to modern interiors...",
+    "careLevel": "Fern"
   },
   {
     "id": "10",
@@ -97,7 +106,8 @@
     "image": "https://img.crocdn.co.uk/images/products2/pl/20/00/00/94/pl2000009455.jpg?width=940&height=940.jpg",
     "benefits": "Produces a strong, sweet fragrance and beautiful white bell-shaped flowers.",
     "drawbacks": "Highly toxic if ingested; every part of the plant is poisonous.",
-    "description": "Lily of the Valley is prized for its dainty, fragrant blossoms and is often used in bouquets. It’s a symbol of purity and renewal. People grow it for its nostalgic scent and cottage-garden charm. Despite its beauty, care must be taken around pets and children. It spreads well in cool, shaded gardens."
+    "description": "Lily of the Valley is prized for its dainty, fragrant blossoms...",
+    "careLevel": "Flowering"
   },
   {
     "id": "11",
@@ -107,7 +117,8 @@
     "image": "https://www.marthastewart.com/thmb/IJw4H5lyXQmgTZtLyqnr3uwCQQk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eight-houseplants-that-thrive-in-low-light-8-0922-2000-39845777816b4f1f8a49b6ef758ef35e.jpg",
     "benefits": "One of the best air-purifying plants; thrives in low light.",
     "drawbacks": "Mildly toxic if ingested and sensitive to overwatering.",
-    "description": "Snake Plant is known for its sword-like upright leaves and resilience. It’s chosen by many for its low light tolerance and ease of care. It fits well in modern, minimalistic interiors. NASA lists it as a top air-cleaning plant. It’s ideal for bedrooms and office spaces."
+    "description": "Snake Plant is known for its sword-like upright leaves...",
+    "careLevel": "Succulent"
   },
   {
     "id": "12",
@@ -117,6 +128,7 @@
     "image": "https://cdn.shopify.com/s/files/1/0612/1648/9635/files/Arabian_Jasmine_Flower_with_buds_600x600.jpg?v=1691713979.jpg",
     "benefits": "Produces highly fragrant blooms and can be used in tea and essential oils.",
     "drawbacks": "Can attract pests like aphids and needs regular pruning.",
-    "description": "Arabian Jasmine is adored for its intensely fragrant white flowers. It’s commonly grown for its cultural and spiritual significance. The plant blooms frequently in warm climates. It adds romance and charm to any space. People often use its flowers in perfumes or garlands."
+    "description": "Arabian Jasmine is adored for its intensely fragrant white flowers...",
+    "careLevel": "Flowering"
   }
 ]
